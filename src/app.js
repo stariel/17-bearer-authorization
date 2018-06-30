@@ -18,7 +18,7 @@ app.use(express.json());  // => req.body
 app.use(express.urlencoded({extended:true})); // req.body => from a form's key value pairs
 
 app.use(authRouter);
-app.use('/api', profileRouter)
+app.use('/api', profileRouter);
 
 app.use(notFound);
 app.use(errorHandler);
