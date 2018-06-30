@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import authRouter from './auth/router.js';
+import profileRouter from './profile_router.js';
 
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/404.js';
@@ -17,6 +18,7 @@ app.use(express.json());  // => req.body
 app.use(express.urlencoded({extended:true})); // req.body => from a form's key value pairs
 
 app.use(authRouter);
+app.use('/api', profileRouter)
 
 app.use(notFound);
 app.use(errorHandler);

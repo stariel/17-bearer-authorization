@@ -21,8 +21,8 @@ authRouter.get('/signin',auth, (req, res, next) => {
   res.send(req.token);
 });
 
-authRouter.get('/showMeTheMoney', auth, (req,res,next) => {
-  res.send('Here is all the ca$h');
+authRouter.get('/topSecret', auth, (req,res,next) => {
+  res.send('The sky is blue.');
 })
 
 export default authRouter;
