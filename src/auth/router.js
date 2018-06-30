@@ -18,7 +18,11 @@ authRouter.post('/signup', (req, res, next) => {
 
 authRouter.get('/signin',auth, (req, res, next) => {
   res.cookie('Token', req.token);
-  res.send('Hi');
+  res.send(req.token);
 });
+
+authRouter.get('/showMeTheMoney', auth, (req,res,next) => {
+  res.send('Here is all the ca$h');
+})
 
 export default authRouter;
