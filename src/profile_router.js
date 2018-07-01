@@ -5,10 +5,10 @@ import express from 'express';
 const router = express.Router();
 
 import Profile from './profile_model.js'
-import auth from './middleware.js';
+import auth from './auth/middleware.js';
 
 
-  router.get('/profile/:id', auth, (req,res,next) => {
+router.get('/profile/:id', auth, (req,res,next) => {
   Profile
     .findById(req.params.id)
     .then( profile => res.send(profile) )
@@ -36,3 +36,5 @@ router.delete('/profile/:id', auth, (req, res) => {
     .then(result => res.send(result))
     .catch(err => res.send(err));
 });
+
+export default router;

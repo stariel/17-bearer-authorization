@@ -1,6 +1,6 @@
 'use strict';
 
-import User from './user_model';
+import User from './model';
 
 export default (req, res, next) => {
 

@@ -37,5 +37,10 @@
   "bugs": {
     "url": "https://github.com/stariel/17-bearer-authorization/issues"
   },
-  "homepage": "https://github.com/stariel/17-bearer-authorization#readme"
+  "homepage": "https://github.com/stariel/17-bearer-authorization#readme",
+  "devDependencies": {
+    "mockgoose": "^7.3.5",
+    "superagent": "^3.8.3",
+    "supertest": "^3.1.0"
+  }
 }
