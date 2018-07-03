@@ -2,6 +2,7 @@
 
 const superagent = require('superagent');
 const app = require('../src/app.js');
+require('dotenv').config()
 
 import Profile from '../src/profile_model.js';
 
@@ -9,7 +10,7 @@ const API_URL = '/profile';
 
 describe('api module', () => {
 
-    const PORT = 8888;
+    const PORT = 1234;
     beforeAll( () => {
       app.start(PORT);
     });
